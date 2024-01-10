@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Products</title>
+  </head>
+  <body>
+    <main>
+      <div class="wrapper">
+        <div class="hero">
+          <img src="product1.jpg" />
+          <div class="hero1">
+            <button id="subtract"><img src="subtract.png" /></button>
+            <span id="cart">0</span>
+            <button id="add"><img src="add.png" /></button>
+          </div>
+          <div>
+            <h3 id="price">0</h3>
+          </div>
+        </div>
+
+        <div class="hero">
+          <img src="product2.jpg" />
+          <div class="hero1">
+            <button id="subtract2"><img src="subtract.png" /></button>
+            <span id="cart2">0</span>
+            <button id="add2"><img src="add.png" /></button>
+          </div>
+          <div>
+            <h3 id="price2">0</h3>
+          </div>
+        </div>
+
+        <div class="hero">
+          <img src="product3.jpg" />
+          <div class="hero1">
+            <button id="subtract3"><img src="subtract.png" /></button>
+            <span id="cart3">0</span>
+            <button id="add3"><img src="add.png" /></button>
+          </div>
+          <div>
+            <h3 id="price3">0</h3>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      //1st Product
+      const subtract$ = document.getElementById("subtract");
+      const add$ = document.getElementById("add");
+      let cart = document.getElementById("cart");
+      let price = document.getElementById("price");
+      //subtract
+      subtract$.addEventListener("click", function () {
+        if (cart.innerText === "0") {
+          alert("You canot subtract the cart.");
+        } else {
+          cart.innerText -= 1;
+          //price update
+          if (price.innerText === 0) {
+            alert("You cannot subtract the price.");
+          } else {
+            price.innerText -= 3000;
+          }
+        }
+      });
+      //add
+      add$.addEventListener("click", function () {
+        if (cart.innerText >= "0" && price.innerText >= 0) {
+          let currentValue = parseInt(cart.innerText);
+          let newValue = currentValue + 1;
+          cart.innerText = newValue;
+          //price update
+          let currentPrice = parseInt(price.innerText);
+          let newPrice = currentPrice + 3000;
+          price.innerText = newPrice;
+        }
+      });
+
+      // 2nd Product
+
+      const subtract2$ = document.getElementById("subtract2");
+      const add2$ = document.getElementById("add2");
+      let cart2 = document.getElementById("cart2");
+      let price2 = document.getElementById("price2");
+      //subtract
+      subtract2$.addEventListener("click", function () {
+        if (cart2.innerText === "0") {
+          alert("You canot subtract the cart.");
+        } else {
+          cart2.innerText -= 1;
+          //price update
+          if (price2.innerText === 0) {
+            alert("You cannot subtract the price.");
+          } else {
+            price2.innerText -= 4000;
+          }
+        }
+      });
+      //add
+      add2$.addEventListener("click", function () {
+        if (cart2.innerText >= "0" && price2.innerText >= 0) {
+          let currentValue = parseInt(cart2.innerText);
+          let newValue = currentValue + 1;
+          cart2.innerText = newValue;
+          //price update
+          let currentPrice = parseInt(price2.innerText);
+          let newPrice = currentPrice + 4000;
+          price2.innerText = newPrice;
+        }
+      });
+
+      // 3rd Product
+
+      const subtract3$ = document.getElementById("subtract3");
+      const add3$ = document.getElementById("add3");
+      let cart3 = document.getElementById("cart3");
+      let price3 = document.getElementById("price3");
+      //subtract
+      subtract3$.addEventListener("click", function () {
+        if (cart3.innerText === "0") {
+          alert("You canot subtract the cart.");
+        } else {
+          cart3.innerText -= 1;
+          //price update
+          if (price3.innerText === 0) {
+            alert("You cannot subtract the price.");
+          } else {
+            price3.innerText -= 8000;
+          }
+        }
+      });
+      //add
+      add3$.addEventListener("click", function () {
+        if (cart3.innerText >= "0" && price3.innerText >= 0) {
+          let currentValue = parseInt(cart3.innerText);
+          let newValue = currentValue + 1;
+          cart3.innerText = newValue;
+          //price update
+          let currentPrice = parseInt(price3.innerText);
+          let newPrice = currentPrice + 8000;
+          price3.innerText = newPrice;
+        }
+      });
+    </script>
+  </body>
+</html>

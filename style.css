@@ -1,0 +1,36 @@
+body {
+  padding: 10px 50px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  height: 500px;
+  width: 1000px;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+}
+
+.hero img {
+  height: 200px;
+}
+
+.hero button img {
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero1 {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
